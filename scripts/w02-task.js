@@ -5,7 +5,7 @@
 /* Step 2 - Variables */
 let fullName = 'Benjamin Couto';
 let currentYear = '2023';
-let profilePicture = 'images/me.jpg'
+let profilePicture = 'images/me.png'
 
 
 /* Step 3 - Element Variables */
