@@ -79,7 +79,7 @@ myProfile.hobbies.forEach(hobby => {
 myProfile.placesLived.forEach(city => {
     const newDt = document.createElement("dt");
     const thePlace = city["place"];
-    newDt.innerHTML = `<strong>${thePlace}</strong>`;
+    newDt.innerHTML = thePlace;
     const newDd = document.createElement("dd");
     newDd.textContent = city["length"];
 
