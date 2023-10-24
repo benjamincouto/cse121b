@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 121b | Final Project</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav>
+        <ul id="menu">
+          <li><a id="toggleMenu">&equiv;</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="w01-task.html">W1 Task</a></li>
+          <li><a href="w03-task.html">W3 Task</a></li>
+          <li><a href="w04-task.html">W4 Task</a></li>
+          <li><a href="w05-task.html">W5 Task</a></li>
+          <li><a href="project.html">Project</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Superhero Search</h1>
+        <div id="search-box">
+        <label for="superhero-search">Search for a Superhero:</label>
+        <input type="text" id="superhero-search" placeholder="Enter superhero name">
+        </div>
+
+        <div id="superhero-info" class="info-container">
+            <h2>Superhero Information</h2>
+            <p><strong>Name: </strong><span id="hero-name"></span></p>
+            <p><strong>Biography</strong> <span id="hero-powerstats"></span></p>
+            <li>Full Name: <span id="hero-fullname"></span></li>
+            <li>Alter Egos: <span id="hero-alteregos"></span></li>
+            <li>Aliases: <span id="hero-aliases"></span></li>
+            <li>Place of Birth: <span id="hero-placeofbirth"></span></li>
+            <li>First Appearance: <span id="hero-firstappearance"></span></li>
+
+            <p><strong>Powerstats</strong> <span id="hero-powerstats"></span></p>
+            <li>Intelligence:<span id="hero-intelligence"></span></li>
+            <li>Strength: <span id="hero-strength"></span></li>
+            <li>Speed: <span id="hero-speed"></span></li>
+            <li>Durability: <span id="hero-durability"></span></li>
+            <li>Power: <span id="hero-power"></span></li>
+            <li>Combat: <span id="hero-combat"></span></li>
+
+            <p><strong>Appearance</strong> <span id="hero-appearance"></span></p>
+            <li>Gender: <span id="hero-gender"></span></li>
+            <li>Race: <span id="hero-race"></span></li>
+            <li>Height: <span id="hero-height"></span></li>
+            <li>Weight: <span id="hero-weight"></span></li>
+            <li>Eyecolor: <span id="hero-eyecolor"></span></li>
+            <li>Haircolor: <span id="hero-haircolor"></span></li>
+
+            <img id="hero-img">
+        </div>
+    </div>
+    <footer>
+        &copy;<span id="year"></span> | About Me | CSE 121b
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/project.js"></script>
+</body>
+</html>

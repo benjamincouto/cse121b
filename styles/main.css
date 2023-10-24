@@ -279,6 +279,44 @@ footer {
     margin: .5rem;
 }
 
+/* Superhero Search */
+
+.container {
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#superheroes-select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#superhero-info {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+#superhero-info li {
+    margin-left: 20px;
+}
+
+.container img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+
+
+
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
     nav ul {
@@ -311,5 +349,8 @@ footer {
         margin: 0 auto;
         max-width: 950px;
     }
+
+
+
 
 }
