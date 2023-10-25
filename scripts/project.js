@@ -36,7 +36,7 @@ function fetchSuperheroData(searchTerm) {
 superheroSearch.addEventListener('keyup', async function () {
     if (event.key === 'Enter') {
         const searchTermLower = superheroSearch.value.toLowerCase();
-        const searchTerm = searchTermLower.charAt(0).toUpperCase() + searchTermLower.slice(1).toLowerCase();
+        const searchTerm = searchTermLower;
         let superheroes = await fetchSuperheroData(searchTerm);
 
         let superheroesdata = await superheroes.json();
