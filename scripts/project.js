@@ -1,23 +1,25 @@
-const superheroSearch = document.getElementById('superhero-search');
-const heroName = document.getElementById('hero-name');
-const herofullname = document.getElementById('hero-fullname');
-const heroalteregos = document.getElementById('hero-alteregos');
-const heroaliases = document.getElementById('hero-aliases');
-const heroaplaceofbirth = document.getElementById('hero-placeofbirth');
-const herofirstappearance = document.getElementById('hero-firstappearance');
-const herointelligence = document.getElementById('hero-intelligence');
-const herostrength = document.getElementById('hero-strength');
-const herospeed = document.getElementById('hero-speed');
-const herodurability = document.getElementById('hero-durability');
-const heropower = document.getElementById('hero-power');
-const herocombat = document.getElementById('hero-combat');
-const herogender = document.getElementById('hero-gender');
-const herorace = document.getElementById('hero-race');
-const heroheight = document.getElementById('hero-height');
-const heroweight = document.getElementById('hero-weight');
-const heroeyecolor = document.getElementById('hero-eyecolor');
-const herohaircolor = document.getElementById('hero-haircolor');
-const heroimg = document.getElementById('hero-img');
+import {byId} from "./getElements.js";
+
+const superheroSearch = byId('superhero-search');
+const heroName = byId('hero-name');
+const herofullname = byId('hero-fullname');
+const heroalteregos = byId('hero-alteregos');
+const heroaliases = byId('hero-aliases');
+const heroaplaceofbirth = byId('hero-placeofbirth');
+const herofirstappearance = byId('hero-firstappearance');
+const herointelligence = byId('hero-intelligence');
+const herostrength = byId('hero-strength');
+const herospeed = byId('hero-speed');
+const herodurability = byId('hero-durability');
+const heropower = byId('hero-power');
+const herocombat = byId('hero-combat');
+const herogender = byId('hero-gender');
+const herorace = byId('hero-race');
+const heroheight = byId('hero-height');
+const heroweight = byId('hero-weight');
+const heroeyecolor = byId('hero-eyecolor');
+const herohaircolor = byId('hero-haircolor');
+const heroimg = byId('hero-img');
 
 function fetchSuperheroData(searchTerm) {
     const url = `https://superhero-search.p.rapidapi.com/api/?hero=${searchTerm}`;
@@ -69,7 +71,6 @@ superheroSearch.addEventListener('keyup', async function () {
             heroimg.src = superheroesdata.images.sm;
     
         } else {
-            // Clear the displayed information if no superheroes are found
             heroName.textContent = 'Not found';
         }
 
