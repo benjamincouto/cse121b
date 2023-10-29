@@ -20,6 +20,12 @@ const heroweight = byId('hero-weight');
 const heroeyecolor = byId('hero-eyecolor');
 const herohaircolor = byId('hero-haircolor');
 const heroimg = byId('hero-img');
+const heropowerstatsaverage = byId('hero-powerstats-average');
+
+//Array to hold powerstats
+let powerStatsArray = [];
+
+
 
 function fetchSuperheroData(searchTerm) {
     const url = `https://superhero-search.p.rapidapi.com/api/?hero=${searchTerm}`;
@@ -69,11 +75,41 @@ superheroSearch.addEventListener('keyup', async function () {
             herohaircolor.textContent = superheroesdata.appearance.hairColor;
             //image
             heroimg.src = superheroesdata.images.sm;
+
+            //Powerstats average (working with array and array methods)
+
+            //clear the powerStatsArray and then Push each powerstat to the array
+            powerStatsArray.length = 0
+            powerStatsArray.push(superheroesdata.powerstats.intelligence);
+            powerStatsArray.push(superheroesdata.powerstats.strength);
+            powerStatsArray.push(superheroesdata.powerstats.speed);
+            powerStatsArray.push(superheroesdata.powerstats.durability);
+            powerStatsArray.push(superheroesdata.powerstats.power);
+            powerStatsArray.push(superheroesdata.powerstats.combat);
+
+            console.log(powerStatsArray);
+
+            //use the reduce method to get powerstats sum
+            let powerStatsSum = powerStatsArray.reduce((accumulator, currentValue) => accumulator + currentValue);
+            console.log(powerStatsSum);
+
+            //powerstats average
+            let powerStatsAvg = Math.round(powerStatsSum / powerStatsArray.length);
+            console.log(powerStatsAvg);
+
+
+            //Modify DOM to include the powerstats average
+            heropowerstatsaverage.textContent = powerStatsAvg;
+
+
+
     
         } else {
             heroName.textContent = 'Not found';
         }
 
     }
+
+
 
 });
